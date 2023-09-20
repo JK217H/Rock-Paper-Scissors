@@ -2,18 +2,18 @@ function getComputerChoice() {
     const randNum = Math.floor(Math.random() *100);
     if (randNum <= 33)
     {
-        const compChoice = "Rock";
-        return compChoice; 
+        const computerSelection = "Rock";
+        return computerSelection; 
     }
     else if (randNum > 33 && randNum <= 66)
     {
-        const compChoice = "Paper";
-        return compChoice; 
+        const computerSelection  = "Paper";
+        return computerSelection ; 
     }
     else 
     {
-        const compChoice = "Scissors";
-        return compChoice; 
+        const computerSelection  = "Scissors";
+        return computerSelection ; 
     }
     }
 
