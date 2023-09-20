@@ -8,13 +8,18 @@ function getComputerChoice() {
     else if (randNum > 33 && randNum <= 66)
     {
         const computerSelection  = "Paper";
-        return computerSelection ; 
+        return computerSelection; 
     }
     else 
     {
         const computerSelection  = "Scissors";
-        return computerSelection ; 
+        return computerSelection; 
     }
     }
 
-    
+    //get player selection
+    //  execute computerSelection
+    //declare function 
+    //compare rock and paper 
+    //compare scissors and rock
+    //compare paper and scissors
