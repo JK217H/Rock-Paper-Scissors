@@ -67,6 +67,10 @@ function getComputerChoice() {
         scoreComputer++;
         console.log("You lost! Paper beats Rock!");
     }
+    else if (computerSelection === playerSelection)
+    {
+        console.log(`Draw, you both chose ${playerSelection}!`)
+    }
     //compare scissors and rock
     //compare paper and scissors
 }
