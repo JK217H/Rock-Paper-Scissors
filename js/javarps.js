@@ -2,17 +2,17 @@ function getComputerChoice() {
     let randNum = Math.floor(Math.random() *100);
     if (randNum <= 33)
     {
-        const computerSelection = "Rock";
+        let computerSelection = "Rock";
         return computerSelection; 
     }
     else if (randNum > 33 && randNum <= 66)
     {
-        const computerSelection  = "Paper";
+        let computerSelection  = "Paper";
         return computerSelection; 
     }
     else 
     {
-        const computerSelection  = "Scissors";
+        let computerSelection  = "Scissors";
         return computerSelection; 
     }
     }
@@ -21,15 +21,15 @@ function getComputerChoice() {
     function getPlayerChoice () {
        let playerSelection = prompt("What do you choose?");
        if (playerSelection === "Rock") {
-        playerSelection = "Rock";
+        
         return playerSelection;
        }
        else if (playerSelection === "Paper"){
-        playerSelection = "Paper";
+        
         return playerSelection;
        }
        else if (playerSelection === "Scissors") {
-        playerSelection = "Scissors"
+        
         return playerSelection;
        }
        else {
@@ -75,9 +75,8 @@ function getComputerChoice() {
      {
        console.log("Draw, you both chose" + playerSelection +"!");
     }
-    console.log("Your score:" + scorePlayer);
-    console.log("Computer score: " + scoreComputer);
-    console.log(computerSelection);
+    console.log("Your score:" + "" + scorePlayer);
+    console.log("Computer score: " + " " + scoreComputer);
     //compare scissors and rock
     //compare paper and scissors
 }
