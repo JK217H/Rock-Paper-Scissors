@@ -75,8 +75,8 @@ function getComputerChoice() {
      {
        console.log("Draw, you both chose" + playerSelection +"!");
     }
-    console.log("Your score:" + "" + scorePlayer);
-    console.log("Computer score: " + " " + scoreComputer);
+    console.log("Your score:" +" " + scorePlayer);
+    console.log("Computer score:" + " " + scoreComputer);
     //compare scissors and rock
     //compare paper and scissors
 }
