@@ -38,8 +38,22 @@ function getComputerChoice() {
     getComputerChoice();
     //declare function 
     function playGame (playerSelection, computerSelection) {
-        
-    }
+        let scorePlayer = 0;
+        let scoreComputer = 0;
+    
     //compare rock and paper 
+    if (playerSelection === "Rock" && computerSelection ==="Scissors"){
+        scorePlayer++;
+        console.log("You won! Rock beats Scissors!");
+    }
+    else if (playerSelection ==="Scissors" && computerSelection ==="Paper") {
+        scorePlayer++;
+        console.log("You won! Scissors beats Paper!");
+    }
+    else if (playerSelection ==="Paper" && computerSelection ==="Rock") {
+        scorePlayer++;
+        console.log("You won! Paper beats Rock!");
+    }
     //compare scissors and rock
     //compare paper and scissors
+}
