@@ -35,12 +35,12 @@ function getComputerChoice() {
        }
     }
     //  execute computerSelection
-    getComputerChoice();
-    getPlayerChoice();
     //declare function 
     function playGame (playerSelection, computerSelection) {
         let scorePlayer = 0;
         let scoreComputer = 0;
+        getComputerChoice();
+        getPlayerChoice();
     
     //compare rock and paper 
     if (playerSelection === "Rock" && computerSelection ==="Scissors"){
@@ -69,8 +69,10 @@ function getComputerChoice() {
     }
     else if (computerSelection === playerSelection)
     {
-        console.log(`Draw, you both chose ${playerSelection}!`)
+        console.log("Draw, you both chose" + playerSelection +"!");
     }
+    console.log("Your score:" + scorePlayer);
+    console.log("Computer score:" + scoreComputer);
     //compare scissors and rock
     //compare paper and scissors
 }
