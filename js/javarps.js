@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    const randNum = Math.floor(Math.random() *100);
+    let randNum = Math.floor(Math.random() *100);
     if (randNum <= 33)
     {
         const computerSelection = "Rock";
@@ -21,12 +21,15 @@ function getComputerChoice() {
     function getPlayerChoice () {
        let playerSelection = prompt("What do you choose?");
        if (playerSelection === "Rock") {
+        playerSelection = "Rock";
         return playerSelection;
        }
        else if (playerSelection === "Paper"){
+        playerSelection = "Paper";
         return playerSelection;
        }
        else if (playerSelection === "Scissors") {
+        playerSelection = "Scissors"
         return playerSelection;
        }
        else {
@@ -36,11 +39,12 @@ function getComputerChoice() {
     }
     //  execute computerSelection
     //declare function 
-    function playGame (playerSelection, computerSelection) {
-        let scorePlayer = 0;
+    let scorePlayer = 0;
         let scoreComputer = 0;
-        getComputerChoice();
-        getPlayerChoice();
+    function playGame () {
+        
+         let computerSelection= getComputerChoice();  
+         let playerSelection = getPlayerChoice();
     
     //compare rock and paper 
     if (playerSelection === "Rock" && computerSelection ==="Scissors"){
@@ -64,15 +68,16 @@ function getComputerChoice() {
         console.log("You lost! Scissors beats Paper!");
     }
     else if (computerSelection === "Paper" && playerSelection ==="Rock") {
-        scoreComputer++;
+        scoreComputer++;p
         console.log("You lost! Paper beats Rock!");
     }
-    else if (computerSelection === playerSelection)
-    {
-        console.log("Draw, you both chose" + playerSelection +"!");
+     else if (computerSelection == playerSelection)
+     {
+       console.log("Draw, you both chose" + playerSelection +"!");
     }
     console.log("Your score:" + scorePlayer);
-    console.log("Computer score:" + scoreComputer);
+    console.log("Computer score: " + scoreComputer);
+    console.log(computerSelection);
     //compare scissors and rock
     //compare paper and scissors
 }
