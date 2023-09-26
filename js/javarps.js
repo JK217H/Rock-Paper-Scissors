@@ -39,48 +39,64 @@ function getComputerChoice() {
     }
     //  execute computerSelection
     //declare function 
- 
-    function playGame () {
-        let scorePlayer = 0;
+    let scorePlayer = 0;
         let scoreComputer = 0;
-        for (i = 0; i < 5; i++)
-        {
-        
+    function playRound () {
+     
+      
          let computerSelection= getComputerChoice();  
          let playerSelection = getPlayerChoice();
     
     //compare rock and paper 
     if (playerSelection === "rock" && computerSelection ==="Scissors"){
         scorePlayer++;
-        console.log("You won! Rock beats Scissors!");
+        return "You won! Rock beats Scissors!"+ "\n Your Score:" + scorePlayer + "\n Computer Score:" + scoreComputer;
     }
     else if (playerSelection ==="scissors" && computerSelection ==="Paper") {
         scorePlayer++;
-        console.log("You won! Scissors beats Paper!");
+        return "You won! Scissors beats Paper!"+ "\n Your Score:" + scorePlayer + "\n Computer Score:" + scoreComputer;
     }
     else if (playerSelection ==="paper" && computerSelection ==="Rock") {
         scorePlayer++;
-        console.log("You won! Paper beats Rock!");
+        return "You won! Paper beats Rock!"+ "\n Your Score:" + scorePlayer + "\n Computer Score:" + scoreComputer;
     }
     else if (computerSelection === "Rock" && playerSelection ==="scissors") {
         scoreComputer++;
-        console.log("You lost! Rock beats Scissors!");
+        return "You lost! Rock beats Scissors!" + "\n Your Score:" + scorePlayer + "\n Computer Score:" + scoreComputer;
     }
     else if (computerSelection === "Scissors" && playerSelection ==="paper") {
         scoreComputer++;
-        console.log("You lost! Scissors beats Paper!");
+        return "You lost! Scissors beats Paper!" + "\n Your Score:" + scorePlayer + "\n Computer Score:" + scoreComputer;
     }
     else if (computerSelection === "Paper" && playerSelection ==="rock") {
         scoreComputer++;
-        console.log("You lost! Paper beats Rock!");
+        return "You lost! Paper beats Rock!" + "\n Your Score:" + scorePlayer + "\n Computer Score:" + scoreComputer;
+      
     }
      else if (computerSelection.toLowerCase() === playerSelection)
      {
-       console.log("Draw, you both chose" + " " +computerSelection +"!");
+        return "Draw, you both chose" + " " +computerSelection +"!" + "\n Your Score:" + scorePlayer + "\n Computer Score:" + scoreComputer;
     }
-    console.log("Your score:" +" " + scorePlayer);
-    console.log("Computer score:" + " " + scoreComputer);
-}
-    //compare scissors and rock
+    
+}//compare scissors and rock
     //compare paper and scissors
+
+
+function game (){
+    scorePlayer = 0;
+    scoreComputer = 0;
+    for (i = 0; i < 5; i++)
+    {
+        let result = playRound();
+        console.log(result);
+    }
+if (scorePlayer > scoreComputer){
+console.log("Good Job, you won!");
+}
+else if (scoreComputer > scorePlayer){
+console.log("Man... you lost!");
+}
+else {
+console.log("It's a ..... DRAW!")
+}
 }
